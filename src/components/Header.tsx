@@ -26,8 +26,8 @@ export function Header({ farmacia }: HeroProps) {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-          <div className="w-8 md:w-10 h-8 md:h-10 bg-primary rounded-full flex items-center justify-center">
-            <span className="material-symbols-outlined text-white font-bold text-lg md:text-2xl">medical_services</span>
+          <div className="w-8 md:w-10 h-8 md:h-10  rounded-full flex items-center justify-center">
+           <img src="/cruz_color2.svg" alt="logo de la farmacia" />
           </div>
           <div className="text-lg md:text-2xl font-bold text-secondary font-headline tracking-tight">
             {farmacia.nombre}

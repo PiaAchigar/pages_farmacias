@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { getFarmaciaByKey } from '@/data/farmacias'
+import { FarmaciaKey } from '@/types/farmacia'
 
 interface ContactRequest {
   nombre: string
@@ -14,7 +16,7 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY)
     const body: ContactRequest = await request.json()
 
-    const { nombre, email, mensaje, farmaciaName } = body
+    const { nombre, email, mensaje, farmaciaKey, farmaciaName } = body
 
     // Validación básica
     if (!nombre || !email || !mensaje) {
@@ -24,11 +26,12 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    const farmacia = getFarmaciaByKey(farmaciaKey as FarmaciaKey)
+
     // Enviar email con Resend
     const data = await resend.emails.send({
       from: 'Pages Farmacias <noreply@rodynafarmacias.com.ar>',
-      // to: `${mail},
-      to:'administracion@rodynafarmacias.com.ar',
+      to: farmacia.mail,
       replyTo: email,
       subject: `[${farmaciaName}] Consulta de ${nombre}`,
       html: `
