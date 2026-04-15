@@ -10,7 +10,7 @@ const dominioToKey: Record<string, FarmaciaKey> = {
   'www.farmaciario1.com.ar': 'rio1',
   'farmaciasudamerica.com.ar': 'sudamerica',
   'www.farmaciasudamerica.com.ar': 'sudamerica',
-  // 'localhost:3000': 'social',
+  'localhost:3000': 'social',
   // 'localhost': 'hunko',
 }
 
