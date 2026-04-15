@@ -5,14 +5,14 @@ const dominioToKey: Record<string, FarmaciaKey> = {
   'farmaciahunko.com.ar': 'hunko',
   'farmaciasocialhunko.com.ar': 'social',
   'farmaciario1.com.ar': 'rio1',
-  'farmacianuevapale.com.ar': 'palermo',
-  'localhost:3000': 'hunko',
+  'farmaciasudamerica.com.ar': 'sudamerica',
+  'localhost:3000': 'social',
   'localhost': 'hunko',
 }
 
 export async function middleware(request: NextRequest) {
   const host = request.headers.get('host') || ''
-  const key = dominioToKey[host] || 'hunko'
+  const key = dominioToKey[host] || 'social'
 
   // Redirige /catalog a la URL externa
   if (request.nextUrl.pathname === '/catalog') {

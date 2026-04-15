@@ -10,14 +10,15 @@ interface HeroProps {
 const links = [
   { href: '#hero', label: 'Inicio' },
   { href: '#nosotros', label: 'Nosotros' },
+  { href: '#catalogo', label: 'Catálogo' },
   { href: '#obras-sociales', label: 'Obras Sociales' },
   { href: '#horarios', label: 'Horarios' },
-  { href: '#catalogo', label: 'Catálogo' },
   { href: '#contactos', label: 'Contactos' },
 ]
 
 export function Header({ farmacia }: HeroProps) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeLink, setActiveLink] = useState('#hero')
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
@@ -39,7 +40,12 @@ export function Header({ farmacia }: HeroProps) {
             <a
               key={link.href}
               href={link.href}
-              className="text-secondary hover:text-primary transition-colors py-2 text-base first:text-primary first:border-b-2 first:border-primary"
+              onClick={() => setActiveLink(link.href)}
+              className={`py-2 text-base transition-colors border-b-2 ${
+                activeLink === link.href
+                  ? 'text-primary border-primary'
+                  : 'text-secondary border-transparent hover:text-primary'
+              }`}
             >
               {link.label}
             </a>
@@ -66,8 +72,10 @@ export function Header({ farmacia }: HeroProps) {
               <a
                 key={link.href}
                 href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="text-secondary hover:text-primary transition-colors py-3 px-2 text-base font-headline font-semibold border-b border-gray-100 last:border-0"
+                onClick={() => { setActiveLink(link.href); setMenuOpen(false) }}
+                className={`py-3 px-2 text-base font-headline font-semibold border-b border-gray-100 last:border-0 transition-colors ${
+                  activeLink === link.href ? 'text-primary' : 'text-secondary hover:text-primary'
+                }`}
               >
                 {link.label}
               </a>

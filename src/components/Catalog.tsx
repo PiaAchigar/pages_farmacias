@@ -37,7 +37,7 @@ export function Catalog() {
               <img
                 alt="Product preview"
                 className="w-full h-auto aspect-square object-cover rounded-xl md:rounded-[2rem]"
-                src="https://images.unsplash.com/photo-1587854692152-cbe660dbde0e?w=300&h=300&fit=crop"
+                src="/pildora.webp"
               />
             </div>
           </div>

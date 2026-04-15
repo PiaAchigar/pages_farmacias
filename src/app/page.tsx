@@ -13,7 +13,9 @@ import { WhatsAppButton } from '@/components/WhatsAppButton'
 
 export default async function Home() {
   const headersList = await headers()
-  const key = (headersList.get('x-farmacia-key') || 'hunko') as FarmaciaKey
+  console.log(headersList.get('x-farmacia-key'))
+  const key = (headersList.get('x-farmacia-key') || 'rio1') as FarmaciaKey
+  console.log(key)
   const farmacia = getFarmaciaByKey(key)
 
   return (
@@ -21,7 +23,7 @@ export default async function Home() {
       <Header farmacia={farmacia} />
       <main className="pt-8 md:pt-16">
         <Hero farmacia={farmacia} />
-        <About />
+        <About farmacia={farmacia}/>
         <Catalog />
         <Services farmacia={farmacia} />
         <Schedules farmacia={farmacia} />

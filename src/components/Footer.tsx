@@ -81,7 +81,7 @@ export function Footer({ farmacia }: FooterProps) {
               </a>
             </li>
             <li>
-              <a href="#" className="text-slate-300 hover:text-white transition-transform hover:translate-x-1 block">
+              <a href="/terminos" className="text-slate-300 hover:text-white transition-transform hover:translate-x-1 block">
                 Términos
               </a>
             </li>
@@ -95,7 +95,10 @@ export function Footer({ farmacia }: FooterProps) {
       </div>
       <div className="max-w-7xl mx-auto px-4 md:px-8 mt-16 pt-8 border-t border-white/10 text-center">
         <p className="text-slate-400 text-xs font-body">
-          © {new Date().getFullYear()} Rodyna Farmacias. Comunidad y Salud Integral.
+                   <a href="www.complexa.cloud" target="_blank">
+                © {new Date().getFullYear()} Complexa IA. Software & Automation.
+              </a>
+          
         </p>
       </div>
     </footer>

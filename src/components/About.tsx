@@ -1,4 +1,10 @@
-export function About() {
+import { Farmacia } from '@/types/farmacia'
+
+interface HeroProps {
+  farmacia: Farmacia
+}
+
+export function About({ farmacia }: HeroProps) {
   return (
     <section className="py-24 md:py-32 bg-slate-50" id="nosotros">
       <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
@@ -6,7 +12,7 @@ export function About() {
           Cuidamos lo más importante: Tu Salud
         </h2>
         <p className="text-base sm:text-lg md:text-xl text-secondary/80 leading-relaxed mb-12 font-medium">
-          En Rodyna Farmacias, nuestra vocación es el bienestar integral. Somos más que una farmacia;
+          En {farmacia.nombre}, nuestra vocación es el bienestar integral. Somos más que una farmacia;
           somos un centro de cuidado donde la atención personalizada y la calidad clínica se encuentran.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

@@ -6,7 +6,7 @@ import { FarmaciaKey } from '@/types/farmacia'
 
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers()
-  const key = (headersList.get('x-farmacia-key') || 'hunko') as FarmaciaKey
+  const key = (headersList.get('x-farmacia-key') || 'social') as FarmaciaKey
   const farmacia = getFarmaciaByKey(key)
 
   return {
@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'Rodyna Farmacias',
       images: [
         {
-          url: '/og-image.svg',
+          url: '/pildora.webp',
           width: 1200,
           height: 630,
           alt: farmacia.nombre,
@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: 'website',
     },
     icons: {
-      icon: '/favicon.ico',
+      icon: '/cruz_color2.svg',
     },
   }
 }

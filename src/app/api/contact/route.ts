@@ -26,8 +26,9 @@ export async function POST(request: NextRequest) {
 
     // Enviar email con Resend
     const data = await resend.emails.send({
-      from: 'Rodyna Farmacias <noreply@rodynafarmacias.com.ar>',
-      to: 'administracion@rodynafarmacias.com.ar',
+      from: 'Pages Farmacias <noreply@rodynafarmacias.com.ar>',
+      // to: `${mail},
+      to:'administracion@rodynafarmacias.com.ar',
       replyTo: email,
       subject: `[${farmaciaName}] Consulta de ${nombre}`,
       html: `

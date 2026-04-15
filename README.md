@@ -27,7 +27,7 @@ Un sitio web moderno, rápido y dinámico para las 4 farmacias, con un único de
 - `farmaciario1.com.ar` → Farmacia Rio1
 - `farmaciasudamerica.com.ar` → Farmacia Sudamerica
 
-Todos los emails van a: `administracion@rodynafarmacias.com.ar`
+
 
 ## 🚀 Desarrollo Local
 
@@ -75,13 +75,6 @@ src/
 
 Fuentes: Plus Jakarta Sans + Manrope (Google Fonts)
 
-## 📧 Emails
-
-Formulario contacto usa Resend:
-- **De**: Rodyna Farmacias <noreply@rodynafarmacias.com.ar>
-- **Para**: administracion@rodynafarmacias.com.ar
-- **Reply-To**: Email del usuario
-- **Subject**: [nombre farmacia] Consulta de {nombre}
 
 ## 🧪 Testing
 
@@ -92,16 +85,6 @@ Para cambiar farmacia en dev, modifica `middleware.ts`:
 'localhost:3000': 'social',  // o 'rio1', 'palermo'
 ```
 
-## 🌐 Dominios en nic.ar
-
-Para cada dominio:
-
-**Opción A: Nameservers** (Recomendado)
-- Reemplaza nameservers con los de Vercel
-- Espera 24-48 horas
-
-**Opción B: CNAME**
-- Agrega record: `@ CNAME cname.vercel-dns.com.`
 
 ## 📱 Secciones
 
@@ -125,10 +108,10 @@ git push origin main  # Deploy automático desde Vercel
 ## 📝 Notas
 
 - Las imágenes usan Unsplash (placeholder) → reemplaza en /public
-- Google Maps embed viene del CLAUDE.md
-- Email siempre va a administracion@rodynafarmacias.com.ar
+- Google Maps embed
+- Email a cada sucurssal
 - Cada farmacia ve su propia info (dirección, teléfono, horarios, obras sociales)
 
-## 📞 Contacto
+## 📞 Contactame
 
-Email: administracion@rodynafarmacias.com.ar
+Email: complexa.ia@gmail.com

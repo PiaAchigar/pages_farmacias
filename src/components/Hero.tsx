@@ -42,7 +42,7 @@ export function Hero({ farmacia }: HeroProps) {
               className="w-64 h-64 md:h-94 md:w-full md:h-120 object-fit"
               src="/pildora.webp"
             />
-            <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8 glass-card p-4 md:p-6 rounded-xl md:rounded-2xl border border-white/20">
+            <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8 glass-card2 p-4 md:p-6 rounded-xl md:rounded-2xl border border-white/20">
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="w-10 md:w-12 h-10 md:h-12 bg-primary rounded-full flex items-center justify-center text-white flex-shrink-0">
                   <span className="material-symbols-outlined text-xl md:text-2xl">verified_user</span>

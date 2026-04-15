@@ -55,9 +55,10 @@ export function Contact({ farmacia }: ContactProps) {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-headline text-secondary mb-6">
               Contactanos
             </h2>
-            <p className="text-base sm:text-lg md:text-lg text-secondary/70 mb-10 font-medium">
-              ¿Tenés alguna consulta o pedido especial? Nuestro equipo está listo para ayudarte.
+            <p className="text-base sm:text-lg md:text-lg text-secondary/70 mb-2 font-medium">
+              ¿Tenés alguna consulta o pedido especial?
             </p>
+            <p className="text-base sm:text-lg md:text-lg text-secondary/70 mb-10 font-medium">Nuestro equipo está listo para ayudarte.</p>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-xs md:text-sm font-bold text-secondary mb-2 md:mb-3">
@@ -129,7 +130,7 @@ export function Contact({ farmacia }: ContactProps) {
                   <p className="text-xs text-secondary/60 font-bold uppercase tracking-wider">
                     Teléfono
                   </p>
-                  <p className="text-secondary font-bold text-xs md:text-lg break-words">{farmacia.telefono}</p>
+                  <p className="text-secondary font-bold text-xs md:text-xs break-words">{farmacia.telefono}</p>
                 </div>
               </div>
               <div className="bg-slate-50 p-5 md:p-6 lg:p-8 rounded-xl md:rounded-2xl flex items-start sm:items-center gap-3 md:gap-4 border border-slate-100">
@@ -138,7 +139,7 @@ export function Contact({ farmacia }: ContactProps) {
                   <p className="text-xs text-secondary/60 font-bold uppercase tracking-wider">
                     Email
                   </p>
-                  <p className="text-secondary font-bold text-xs md:text-lg break-words">{farmacia.mail}</p>
+                  <p className="text-secondary font-bold text-xs md:text-xs break-words">{farmacia.mail}</p>
                 </div>
               </div>
             </div>
