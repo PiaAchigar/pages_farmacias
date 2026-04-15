@@ -6,8 +6,8 @@ const dominioToKey: Record<string, FarmaciaKey> = {
   'farmaciasocialhunko.com.ar': 'social',
   'farmaciario1.com.ar': 'rio1',
   'farmaciasudamerica.com.ar': 'sudamerica',
-  'localhost:3000': 'social',
-  'localhost': 'hunko',
+  // 'localhost:3000': 'social',
+  // 'localhost': 'hunko',
 }
 
 export async function middleware(request: NextRequest) {
