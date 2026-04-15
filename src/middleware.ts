@@ -3,9 +3,13 @@ import { FarmaciaKey } from '@/data/farmacias'
 
 const dominioToKey: Record<string, FarmaciaKey> = {
   'farmaciahunko.com.ar': 'hunko',
+  'www.farmaciahunko.com.ar': 'hunko',
   'farmaciasocialhunko.com.ar': 'social',
+  'www.farmaciasocialhunko.com.ar': 'social',
   'farmaciario1.com.ar': 'rio1',
+  'www.farmaciario1.com.ar': 'rio1',
   'farmaciasudamerica.com.ar': 'sudamerica',
+  'www.farmaciasudamerica.com.ar': 'sudamerica',
   // 'localhost:3000': 'social',
   // 'localhost': 'hunko',
 }
