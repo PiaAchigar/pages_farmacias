@@ -1,92 +1,80 @@
 'use client'
-
+import { useState } from 'react'
+import { Farmacia } from '@/types/farmacia'
 import Link from 'next/link'
 
-export function Header() {
+interface HeroProps {
+  farmacia: Farmacia
+}
+
+const links = [
+  { href: '#hero', label: 'Inicio' },
+  { href: '#nosotros', label: 'Nosotros' },
+  { href: '#obras-sociales', label: 'Obras Sociales' },
+  { href: '#horarios', label: 'Horarios' },
+  { href: '#catalogo', label: 'Catálogo' },
+  { href: '#contactos', label: 'Contactos' },
+]
+
+export function Header({ farmacia }: HeroProps) {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm h-20">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-8 h-full">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-lg">+</span>
+    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-8 h-16 md:h-20">
+
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+          <div className="w-8 md:w-10 h-8 md:h-10 bg-primary rounded-full flex items-center justify-center">
+            <span className="material-symbols-outlined text-white font-bold text-lg md:text-2xl">medical_services</span>
           </div>
-          <div className="text-2xl font-bold text-secondary font-headline tracking-tight">
-            Rodyna
+          <div className="text-lg md:text-2xl font-bold text-secondary font-headline tracking-tight">
+            {farmacia.nombre}
           </div>
         </Link>
 
-        <div className="hidden md:flex items-center space-x-8 font-headline font-semibold tracking-tight">
-          <a
-            href="#hero"
-            className="text-primary border-b-2 border-primary pb-1"
-          >
-            Inicio
-          </a>
-          <a
-            href="#nosotros"
-            className="text-secondary hover:text-primary transition-colors"
-          >
-            Nosotros
-          </a>
-          <a
-            href="#obras-sociales"
-            className="text-secondary hover:text-primary transition-colors"
-          >
-            Obras Sociales
-          </a>
-          <a
-            href="#horarios"
-            className="text-secondary hover:text-primary transition-colors"
-          >
-            Horarios
-          </a>
-          <a
-            href="#catalogo"
-            className="text-secondary hover:text-primary transition-colors"
-          >
-            Catálogo
-          </a>
-          <a
-            href="#contactos"
-            className="text-secondary hover:text-primary transition-colors"
-          >
-            Contactos
-          </a>
-          <button className="text-secondary hover:text-primary transition-colors">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+        {/* Links — solo visibles en lg+ */}
+        <div className="hidden lg:flex items-center gap-10 font-headline font-semibold tracking-tight">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-secondary hover:text-primary transition-colors py-2 text-base first:text-primary first:border-b-2 first:border-primary"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
+              {link.label}
+            </a>
+          ))}
         </div>
 
-        <div className="flex items-center space-x-4 md:hidden">
-          <button className="text-secondary">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
-        </div>
+        {/* Hamburger — visible en mobile y md */}
+        <button
+          className="lg:hidden text-secondary hover:text-primary transition-colors p-2"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Abrir menú"
+        >
+          <span className="material-symbols-outlined text-2xl">
+            {menuOpen ? 'close' : 'menu'}
+          </span>
+        </button>
       </div>
+
+      {/* Menú desplegable mobile/md */}
+      {menuOpen && (
+        <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-lg">
+          <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex flex-col gap-1">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-secondary hover:text-primary transition-colors py-3 px-2 text-base font-headline font-semibold border-b border-gray-100 last:border-0"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   )
 }

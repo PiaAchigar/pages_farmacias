@@ -5,6 +5,7 @@ export interface Farmacia {
   direccion: string
   telefono: string
   whatsapp: string
+  mail:string
   horarioSemana: string
   horarioSabado: string
   obrasSociales: string[]
@@ -13,4 +14,4 @@ export interface Farmacia {
   facebook: string
 }
 
-export type FarmaciaKey = 'hunko' | 'social' | 'rio1' | 'palermo'
+export type FarmaciaKey = 'hunko' | 'social' | 'rio1' | 'sudamerica'

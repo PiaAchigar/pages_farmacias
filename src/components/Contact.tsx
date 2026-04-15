@@ -48,19 +48,19 @@ export function Contact({ farmacia }: ContactProps) {
   }
 
   return (
-    <section className="py-24 bg-white" id="contactos">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-24 md:py-32 bg-white" id="contactos">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
-            <h2 className="text-4xl font-extrabold font-headline text-secondary mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-headline text-secondary mb-6">
               Contactanos
             </h2>
-            <p className="text-lg text-secondary/70 mb-10 font-medium">
+            <p className="text-base sm:text-lg md:text-lg text-secondary/70 mb-10 font-medium">
               ¿Tenés alguna consulta o pedido especial? Nuestro equipo está listo para ayudarte.
             </p>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-bold text-secondary mb-2">
+                <label className="block text-xs md:text-sm font-bold text-secondary mb-2 md:mb-3">
                   Nombre Completo
                 </label>
                 <input
@@ -68,11 +68,11 @@ export function Contact({ farmacia }: ContactProps) {
                   name="nombre"
                   type="text"
                   placeholder="Juan Pérez"
-                  className="w-full bg-surface border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary transition-all"
+                  className="w-full bg-slate-50 border-0 rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 focus:ring-2 focus:ring-primary transition-all text-sm md:text-base"
                 />
               </div>
               <div>
-                <label className="block text-sm font-bold text-secondary mb-2">
+                <label className="block text-xs md:text-sm font-bold text-secondary mb-2 md:mb-3">
                   Correo Electrónico
                 </label>
                 <input
@@ -80,11 +80,11 @@ export function Contact({ farmacia }: ContactProps) {
                   name="email"
                   type="email"
                   placeholder="juan@ejemplo.com"
-                  className="w-full bg-surface border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary transition-all"
+                  className="w-full bg-slate-50 border-0 rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 focus:ring-2 focus:ring-primary transition-all text-sm md:text-base"
                 />
               </div>
               <div>
-                <label className="block text-sm font-bold text-secondary mb-2">
+                <label className="block text-xs md:text-sm font-bold text-secondary mb-2 md:mb-3">
                   Mensaje
                 </label>
                 <textarea
@@ -92,23 +92,23 @@ export function Contact({ farmacia }: ContactProps) {
                   name="mensaje"
                   placeholder="Escribí tu consulta aquí..."
                   rows={4}
-                  className="w-full bg-surface border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary transition-all"
+                  className="w-full bg-slate-50 border-0 rounded-xl md:rounded-2xl px-4 md:px-6 py-3 md:py-4 focus:ring-2 focus:ring-primary transition-all text-sm md:text-base"
                 />
               </div>
               {successMessage && (
-                <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg text-sm">
+                <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg text-xs md:text-sm">
                   {successMessage}
                 </div>
               )}
               {errorMessage && (
-                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-xs md:text-sm">
                   {errorMessage}
                 </div>
               )}
               <button
                 type="submit"
                 disabled={isLoading}
-                className="bg-primary text-white w-full py-5 rounded-2xl font-bold text-lg hover:brightness-105 transition-all shadow-lg disabled:opacity-70"
+                className="bg-primary text-white w-full py-3 md:py-5 rounded-xl md:rounded-2xl font-bold text-sm md:text-lg hover:brightness-105 transition-all shadow-lg disabled:opacity-70"
               >
                 {isLoading ? 'Enviando...' : 'Enviar Mensaje'}
               </button>
@@ -116,34 +116,29 @@ export function Contact({ farmacia }: ContactProps) {
           </div>
 
           <div className="space-y-8">
-            <div className="rounded-[2.5rem] overflow-hidden shadow-lg h-[400px] bg-slate-100 relative">
+            <div className="rounded-2xl md:rounded-[2.5rem] overflow-hidden botanical-shadow h-64 md:h-80 lg:h-[400px] bg-slate-100 relative">
               <div
                 dangerouslySetInnerHTML={{ __html: farmacia.googleMapsEmbed }}
                 className="w-full h-full"
               />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-surface p-6 rounded-2xl flex items-center gap-4 border border-slate-100">
-                <svg className="w-8 h-8 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773c.418 1.455 1.457 2.98 2.816 4.333 1.359 1.352 2.894 2.389 4.35 2.8l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-                <div>
+              <div className="bg-slate-50 p-5 md:p-6 lg:p-8 rounded-xl md:rounded-2xl flex items-start sm:items-center gap-3 md:gap-4 border border-slate-100">
+                <span className="material-symbols-outlined text-primary text-3xl md:text-4xl flex-shrink-0">call</span>
+                <div className="min-w-0">
                   <p className="text-xs text-secondary/60 font-bold uppercase tracking-wider">
                     Teléfono
                   </p>
-                  <p className="text-secondary font-bold">{farmacia.telefono}</p>
+                  <p className="text-secondary font-bold text-xs md:text-lg break-words">{farmacia.telefono}</p>
                 </div>
               </div>
-              <div className="bg-surface p-6 rounded-2xl flex items-center gap-4 border border-slate-100">
-                <svg className="w-8 h-8 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-                <div>
+              <div className="bg-slate-50 p-5 md:p-6 lg:p-8 rounded-xl md:rounded-2xl flex items-start sm:items-center gap-3 md:gap-4 border border-slate-100">
+                <span className="material-symbols-outlined text-primary text-3xl md:text-4xl flex-shrink-0">mail</span>
+                <div className="min-w-0">
                   <p className="text-xs text-secondary/60 font-bold uppercase tracking-wider">
                     Email
                   </p>
-                  <p className="text-secondary font-bold">administracion@rodynafarmacias.com.ar</p>
+                  <p className="text-secondary font-bold text-xs md:text-lg break-words">{farmacia.mail}</p>
                 </div>
               </div>
             </div>

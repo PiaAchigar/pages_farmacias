@@ -18,8 +18,8 @@ export default async function Home() {
 
   return (
     <>
-      <Header />
-      <main className="pt-20">
+      <Header farmacia={farmacia} />
+      <main className="pt-8 md:pt-16">
         <Hero farmacia={farmacia} />
         <About />
         <Catalog />

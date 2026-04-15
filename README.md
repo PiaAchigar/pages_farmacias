@@ -1,6 +1,6 @@
-# Rodyna Farmacias - Multi-Domain Website
+# Pages Farmacias - Multi-Domain Website
 
-Un sitio web moderno, rápido y dinámico para las 4 farmacias del grupo Rodyna, con un único deploy en Vercel que detecta automáticamente el dominio y renderiza la información de la farmacia correspondiente.
+Un sitio web moderno, rápido y dinámico para las 4 farmacias, con un único deploy en Vercel que detecta automáticamente el dominio y renderiza la información de la farmacia correspondiente.
 
 ## 🎯 Características
 
@@ -25,7 +25,7 @@ Un sitio web moderno, rápido y dinámico para las 4 farmacias del grupo Rodyna,
 - `farmaciahunko.com.ar` → Farmacia Hunko
 - `farmaciasocialhunko.com.ar` → Farmacia Social Hunko
 - `farmaciario1.com.ar` → Farmacia Rio1
-- `farmacianuevapale.com.ar` → Farmacia Nueva Palermo
+- `farmaciasudamerica.com.ar` → Farmacia Sudamerica
 
 Todos los emails van a: `administracion@rodynafarmacias.com.ar`
 
