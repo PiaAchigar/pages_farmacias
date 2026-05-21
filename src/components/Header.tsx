@@ -10,10 +10,10 @@ interface HeroProps {
 const links = [
   { href: '#hero', label: 'Inicio' },
   { href: '#nosotros', label: 'Nosotros' },
-  { href: '#catalogo', label: 'Catálogo' },
   { href: '#obras-sociales', label: 'Obras Sociales' },
   { href: '#horarios', label: 'Horarios' },
   { href: '#contactos', label: 'Contactos' },
+  { href: '#catalogo', label: 'Catálogo' },
 ]
 
 export function Header({ farmacia }: HeroProps) {
