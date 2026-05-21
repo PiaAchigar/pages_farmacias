@@ -18,19 +18,25 @@ export function Catalog() {
           </div>
           <div className="relative z-10 max-w-xl w-full lg:w-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-headline text-white mb-6 md:mb-8">
-              Explorá nuestro Catálogo Online
+              Estamos trabajando para ofrecerte el mejor servicio online
             </h2>
             <p className="text-white/80 text-base sm:text-lg md:text-xl mb-8 md:mb-12 font-medium">
               Encontrá todos los productos que necesitás con solo un clic. Envíos a domicilio y retiro en
               sucursal.
             </p>
-            <button
-              onClick={handleCatalogRedirect}
-              className="bg-primary text-white px-8 md:px-12 py-3 md:py-5 rounded-2xl font-bold text-sm md:text-lg hover:brightness-105 transition-all shadow-lg flex items-center gap-2 md:gap-3"
-            >
-              Ver Productos
-              <span className="material-symbols-outlined">arrow_forward</span>
-            </button>
+            <div className="relative group w-fit">
+              <button
+                disabled
+                className="bg-gray-400 text-white/70 px-8 md:px-12 py-3 md:py-5 rounded-2xl font-bold text-sm md:text-lg transition-all shadow-lg flex items-center gap-2 md:gap-3 cursor-not-allowed"
+              >
+                Ver Productos
+                <span className="material-symbols-outlined">arrow_forward</span>
+              </button>
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                Muy pronto! Catálogo Online
+                <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
+              </div>
+            </div>
           </div>
           <div className="relative z-10 w-full sm:w-auto flex justify-center lg:justify-end">
             <div className="bg-white p-4 md:p-6 rounded-2xl md:rounded-[2.5rem] botanical-shadow transform rotate-3 w-48 sm:w-56 md:w-64">
