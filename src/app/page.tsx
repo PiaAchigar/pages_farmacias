@@ -24,10 +24,10 @@ export default async function Home() {
       <main className="pt-8 md:pt-16">
         <Hero farmacia={farmacia} />
         <About farmacia={farmacia}/>
-        <Catalog />
         <Services farmacia={farmacia} />
         <Schedules farmacia={farmacia} />
         <Contact farmacia={farmacia} />
+        <Catalog />
         <Footer farmacia={farmacia} />
       </main>
       <WhatsAppButton farmacia={farmacia} />

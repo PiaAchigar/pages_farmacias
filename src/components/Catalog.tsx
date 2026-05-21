@@ -18,11 +18,10 @@ export function Catalog() {
           </div>
           <div className="relative z-10 max-w-xl w-full lg:w-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold font-headline text-white mb-6 md:mb-8">
-              Estamos trabajando para ofrecerte el mejor servicio online
+             ¡MUY PRONTO! Catálogo Online
             </h2>
             <p className="text-white/80 text-base sm:text-lg md:text-xl mb-8 md:mb-12 font-medium">
-              Encontrá todos los productos que necesitás con solo un clic. Envíos a domicilio y retiro en
-              sucursal.
+              Estamos trabajando para ofrecerte el mejor servicio online
             </p>
             <div className="relative group w-fit">
               <button
@@ -33,7 +32,7 @@ export function Catalog() {
                 <span className="material-symbols-outlined">arrow_forward</span>
               </button>
               <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                Muy pronto! Catálogo Online
+                ¡Muy pronto! Catálogo Online
                 <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
               </div>
             </div>

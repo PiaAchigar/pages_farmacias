@@ -19,12 +19,18 @@ export function Hero({ farmacia }: HeroProps) {
             Cuidamos lo más importante: Tu Salud.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
-            <a
+            {/* <a
               href="#catalogo"
               className="bg-primary text-white text-center px-6 sm:px-8 md:px-10 py-3 md:py-5 rounded-2xl font-bold text-sm md:text-lg hover:shadow-lg transition-all transform hover:-translate-y-1"
             >
               Ver Catálogo Online
-            </a>
+            </a> */}
+            <a
+              href="#obras-sociales"
+              className="bg-primary text-white text-center px-6 sm:px-8 md:px-10 py-3 md:py-5 rounded-2xl font-bold text-sm md:text-lg hover:shadow-lg transition-all transform hover:-translate-y-1"
+            >
+              Obras Sociales
+            </a> 
             <a
               href="#nosotros"
               className="bg-white text-secondary border-2 border-primary text-center px-6 sm:px-8 md:px-10 py-3 md:py-5 rounded-2xl font-bold text-sm md:text-lg hover:bg-slate-50 transition-all"
