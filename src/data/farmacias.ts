@@ -60,7 +60,7 @@ export const farmacias: Record<FarmaciaKey, Farmacia> = {
     mail:'info.farmaciasudamerica@gmail.com',
     horarioSemana: '09:00 - 20:00 hs',
     horarioSabado: '09:00 - 13:00 hs',
-    obrasSociales: ['Swiss Medical', 'Galeno'],
+    obrasSociales: ['Galeno','Avalian','SanCorSalud'],
     googleMapsEmbed:
       '<iframe src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.5474984385914!2d-58.418227024045116!3d-34.61560219832565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf76db15fd1%3A0x3591352c9bb36144!2sAv.%20Belgrano%203356%2C%20C1210AAO%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1776274404230!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
     instagram: 'https://www.instagram.com/farmaciasudamerica/',
