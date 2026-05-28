@@ -139,7 +139,7 @@ export function Contact({ farmacia }: ContactProps) {
                   <p className="text-xs text-secondary/60 font-bold uppercase tracking-wider">
                     Email
                   </p>
-                  <p className="text-secondary font-bold text-xs md:text-xs break-words">{farmacia.mail}</p>
+                  <p className="text-secondary font-bold text-xs md:text-xs break-words max-w-full">{farmacia.mail}</p>
                 </div>
               </div>
             </div>
