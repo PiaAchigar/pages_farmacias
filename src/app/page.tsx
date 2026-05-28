@@ -14,7 +14,7 @@ import { WhatsAppButton } from '@/components/WhatsAppButton'
 export default async function Home() {
   const headersList = await headers()
   console.log(headersList.get('x-farmacia-key'))
-  const key = (headersList.get('x-farmacia-key') || 'rio1') as FarmaciaKey
+  const key = (headersList.get('x-farmacia-key') || 'hunko') as FarmaciaKey
   console.log(key)
   const farmacia = getFarmaciaByKey(key)
 
