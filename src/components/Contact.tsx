@@ -123,8 +123,8 @@ export function Contact({ farmacia }: ContactProps) {
                 className="w-full h-full"
               />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-slate-50 p-5 md:p-6 lg:p-8 rounded-xl md:rounded-2xl flex items-start sm:items-center gap-3 md:gap-4 border border-slate-100">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="bg-slate-50 p-5 md:p-6 lg:p-8 rounded-xl md:rounded-2xl flex items-start sm:items-center gap-3 md:gap-4 border border-slate-100 sm:col-span-1">
                 <span className="material-symbols-outlined text-primary text-3xl md:text-4xl flex-shrink-0">call</span>
                 <div className="min-w-0">
                   <p className="text-xs text-secondary/60 font-bold uppercase tracking-wider">
@@ -133,7 +133,7 @@ export function Contact({ farmacia }: ContactProps) {
                   <p className="text-secondary font-bold text-xs md:text-xs break-words">{farmacia.telefono}</p>
                 </div>
               </div>
-              <div className="bg-slate-50 p-5 md:p-6 lg:p-8 rounded-xl md:rounded-2xl flex items-start sm:items-center gap-3 md:gap-4 border border-slate-100">
+              <div className="bg-slate-50 p-5 md:p-6 lg:p-8 rounded-xl md:rounded-2xl flex items-start sm:items-center gap-3 md:gap-4 border border-slate-100 sm:col-span-2">
                 <span className="material-symbols-outlined text-primary text-3xl md:text-4xl flex-shrink-0">mail</span>
                 <div className="min-w-0">
                   <p className="text-xs text-secondary/60 font-bold uppercase tracking-wider">
